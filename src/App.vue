@@ -3,15 +3,18 @@
   <main>
     <router-view/>
   </main>
+  <AppFooter />
 </template>
 
 <script>
 import AppHeader from '@/components/AppNavbar'
+import AppFooter from '@/components/AppFooter'
 
 export default {
   name: 'App',
   components: {
-    AppHeader
+    AppHeader,
+    AppFooter
   }
 }
 </script>
@@ -25,6 +28,7 @@ body {
 
 main {
   max-width: 1100px;
+  min-height: 70vh;
   background: #eaebea;
   margin: auto;
   overflow: auto;

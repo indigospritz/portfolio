@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <span>Christian Del Monte</span>
+    <span><code>Christian Del Monte</code></span>
     <div class="socials">
       <a href="https://github.com/delmsnoob" target="_blank">
         <i class="fa-brands fa-github"></i>
@@ -41,6 +41,10 @@ export default {
   .socials {
     display: flex;
     gap: .7rem;
+  }
+
+  span {
+    font-weight: 900;
   }
 
   i {
