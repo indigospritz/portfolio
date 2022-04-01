@@ -48,7 +48,7 @@ export default {
     background: #e5e9e7;
     max-width: 1100px;
     margin: auto;
-    padding: 1rem 2rem;
+    padding: 2.5rem 2rem;
   }
 
   nav {
@@ -56,12 +56,6 @@ export default {
     align-items: center;
     justify-content: space-between;
     position: relative;
-  }
-
-  h1 > code {
-    font-size: 28px;
-    font-weight: bolder;
-    letter-spacing: -2px;
   }
 
   ul {
@@ -76,17 +70,24 @@ export default {
   .tab-wrapper {
     display: flex;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: 2rem .5rem;
   }
 
   .tab-text {
     text-decoration: none;
     font-family: Consolas, 'Courier New';
     font-weight: 900;
-    padding: 2rem 0;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    color: #4b4141;
   }
 
   .logo {
     font-size: 20px;
+  }
+
+  .router-link-active {
+    background: #dddddd;
+
   }
 </style>
