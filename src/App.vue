@@ -28,7 +28,7 @@ body {
 
 main {
   max-width: 1100px;
-  min-height: 70vh;
+  min-height: 80vh;
   background: #eaebea;
   margin: auto;
   overflow: auto;
