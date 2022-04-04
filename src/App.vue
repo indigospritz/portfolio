@@ -1,5 +1,5 @@
 <template>
-  <AppHeader/>
+  <AppNavbar/>
   <main>
     <router-view/>
   </main>
@@ -7,13 +7,13 @@
 </template>
 
 <script>
-import AppHeader from '@/components/AppNavbar'
+import AppNavbar from '@/components/AppNavbar'
 import AppFooter from '@/components/AppFooter'
 
 export default {
   name: 'App',
   components: {
-    AppHeader,
+    AppNavbar,
     AppFooter
   }
 }

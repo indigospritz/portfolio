@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav>
-      <a href="/" class="tab-text logo">indigo</a>
+      <a href="/" class="tab-text logo"><h1>indigo</h1></a>
       <div class="tab-wrapper">
         <router-link
           v-for="tab in tabs"
@@ -48,7 +48,7 @@ export default {
     background: #e5e9e7;
     max-width: 1100px;
     margin: auto;
-    padding: 2.5rem 2rem;
+    padding: .5rem 2rem;
   }
 
   nav {
@@ -84,6 +84,7 @@ export default {
 
   .logo {
     font-size: 20px;
+    letter-spacing: -2px;
   }
 
   .router-link-active {
