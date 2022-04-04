@@ -3,14 +3,14 @@
   <main>
     <section class="icons">
       <div class="icon-wrapper">
-        <i class="fa-brands fa-vuejs"></i>
+        <i class="fa-brands fa-vuejs" title="asdasd"></i>
         <span>Vue</span>
       </div>
 
-      <div class="icon-wrapper">
+      <!-- <div class="icon-wrapper">
         <i class="fa-brands fa-node-js"></i>
         <span>Node</span>
-      </div>
+      </div> -->
 
       <div class="icon-wrapper">
         <i class="fa-brands fa-js"></i>
@@ -18,8 +18,28 @@
       </div>
 
       <div class="icon-wrapper">
-        <img src="@/assets/images/mysql.png" class="mysql" alt="">
+        <img src="@/assets/icons/mysql.png" class="mysql" alt="">
         <span>MySQL</span>
+      </div>
+
+      <div class="icon-wrapper">
+        <i class="fa-brands fa-html5"></i>
+        <span>HTML</span>
+      </div>
+
+      <div class="icon-wrapper">
+        <i class="fa-brands fa-css3"></i>
+        <span>CSS</span>
+      </div>
+
+      <div class="icon-wrapper">
+        <img src="@/assets/icons/jestjs.png" class="mysql" alt="">
+        <span>Jest</span>
+      </div>
+
+      <div class="icon-wrapper">
+        <i class="fa-brands fa-hackerrank"></i>
+        <span>HackerRank</span>
       </div>
       
     </section>
@@ -54,7 +74,7 @@ export default {
   }
 
   i {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   p {
@@ -68,6 +88,7 @@ export default {
   }
 
   .icon-wrapper {
+    box-sizing: border-box;
     margin-top: 1rem;
     height: 100px;
     width: 110px;
@@ -77,6 +98,13 @@ export default {
     align-content: center;
     border-radius: 6px;
     gap: .5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .icon-wrapper:hover {
+    transform: all scale(1.02);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.2),0 6px 15px 0 rgba(0,0,0,.19);
   }
 
   span {
