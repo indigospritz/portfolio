@@ -1,5 +1,5 @@
 <template>
-  <section class="preface">
+  <section>
     <div class="card left">
       <h2><code class="card-header">Howdy! My name is Christian.</code></h2>
       <code class="card-body">A 23 year old Web Developer and Software Quality Assurance Engineer based in Cebu, Philippines. Testing web applications and finding bugs brings music to my ears.</code>
@@ -11,7 +11,7 @@
 
   </section>
 
-    <h2><code class="projects-header">Projects</code></h2>
+    <!-- <h2><code class="projects-header">Projects</code></h2>
     <section class="projects">
       
       <div class="card-project">
@@ -34,7 +34,7 @@
          <a href="#"><code>Project Four</code></a>
       </div>
 
-    </section>
+    </section> -->
 </template>
 
 <script>
@@ -48,6 +48,9 @@ export default {
 <style scoped>
   section {
     display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 70vh;
   }
 
   .card {
@@ -55,10 +58,6 @@ export default {
     align-content: center;
     /* justify-content: center; */
     overflow: hidden;
-  }
-
-  .preface {
-    justify-content: space-evenly;
   }
 
   .projects {

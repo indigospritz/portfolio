@@ -6,3 +6,10 @@ describe('My First Test', () => {
     cy.contains('h2', 'Howdy')
   })
 })
+
+describe('My First Test', () => {
+  it('Visits the projects view', () => {
+    cy.visit('/projects')
+    cy.contains('h1', 'Sample Project 1')
+  })
+})

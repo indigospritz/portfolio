@@ -1,6 +1,6 @@
 <template>
   <h1><code>About</code></h1>
-  <main>
+  <div class="about-wrapper">
     <section class="icons">
       <div class="icon-wrapper">
         <i class="fa-brands fa-vuejs" title="asdasd"></i>
@@ -49,7 +49,7 @@
 
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit repellat consequatur enim quaerat minus, nemo facere exercitationem architecto quisquam. Maiores ipsum, facere magni assumenda dignissimos quisquam temporibus minima neque odio perspiciatis illum incidunt, cumque ad odit sequi velit dolorem, dolor soluta placeat hic amet provident. Neque eius porro consequatur sed.</p>
     </article>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style scoped>
-  main {
+  .about-wrapper {
     display: flex;
     gap: 1.5rem;
   }

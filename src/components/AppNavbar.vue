@@ -12,6 +12,14 @@
         />
       </div>
     </nav>
+
+    <!-- <nav v-else-if="screen.width >= 360">
+      <button>
+        <span>---</span>
+        <span>---</span>
+        <span>---</span>
+      </button>
+    </nav> -->
   </header>
 </template>
 
@@ -90,5 +98,18 @@ export default {
   .router-link-active {
     background: #dddddd;
 
+  }
+
+  @media (max-width: 360px) {
+    .logo {
+      font-size: 12px;
+    }
+    /* nav {
+      flex-direction: column;
+    }
+
+    ul {
+      flex-direction: column;
+    } */
   }
 </style>
