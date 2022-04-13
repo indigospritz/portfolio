@@ -1,6 +1,6 @@
 <template>
   <transition name="slide-fade">
-    <div>
+    <div class="wrapper">
       <h1><code>Projects</code></h1>
       <section
         v-for="project in projects"
@@ -8,61 +8,59 @@
         class="project-wrapper"
       >
         <div class="project-figure__wrapper">
-          <img :src="project.source" class="project-figure">
+          <router-link :to="{ name: 'ProjectDetails', params: { id: project.id, name: project.name, url: project.url, desc: project.desc, source: project.source } }" class="project-title">
+            <img :src="getImg(project.source)" class="project-figure">
+          </router-link>
         </div>
 
-        <article>
-          <router-link :to="{ name: 'ProjectDetails', params: { id: project.id, name: project.name, url: project.url, desc: project.desc, source: project.source } }" class="project-title">
-            <h2><code>{{ project.name }}</code></h2>
-          </router-link>
+        <div class="temp">
+          <article>
+            <router-link :to="{ name: 'ProjectDetails', params: { id: project.id, name: project.name, url: project.url, desc: project.desc, source: project.source } }" class="project-title">
+              <h2><code>{{ project.name }}</code></h2>
+            </router-link>
           <p v-html="project.desc"></p>
-        </article>
+          <!-- <TestingComponent /> -->
+          </article>
+        </div>
+        <small>This is a test.</small>
       </section>
     </div>
   </transition>
 </template>
 
 <script>
+// import TestingComponent from '@/components/TestingComponent.vue'
 export default {
   name: 'ProjectsView',
+  // components: {
+  //   TestingComponent
+  // },
   data () {
     return {
-      projects: [
-        {
-          id: 1,
-          name: "Sample Project 1",
-          url: "sample-project-1",
-          desc: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et porro magni ut consectetur ad laborum dicta architecto veritatis nobis? Doloribus repudiandae quibusdam error, maxime doloremqntur fugit in magnam amet porro quos commodi alias veritatis earum quod quas. Omnis animi dolorem ea ut quo praesentium sunt?</p><p>raesentium odit quo rem cupiditate error saepe aliquid fugiat quaerat asper ue aperiam pariatur? Aperiam veniam, eum sapiente natus des conseqEum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequu</p>",
-          source: require('@/assets/images/undraw_progressive_app_m-9-ms.svg'),
-        },
-        {
-          id: 2,
-          name: "Sample Project 2",
-          url: "sample-project-2",
-          desc: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et porro magni ut consectetur ad laborum dicta architecto ver veniam? Eum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias veritatis earum quod quas. Omnis animi dolorem ea ut quo praesentium sunt?</p><p>raesentium odit quo rem cupiditate error saepe aliquid fugiat quaerat asper</p>",
-          source: require('@/assets/images/undraw_progressive_app_m-9-ms.svg')
-        },
-        {
-          id: 3,
-          name: "Sample Project 3",
-          url: "sample-project-3",
-          desc: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et porro magni ut consectetur ad laborum dicta architecto ver veniam? Eum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias vEum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias vEum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias veritatis earum quod quas. Omnis animi dolorem ea ut quo praesentium sunt?</p><p>raesentium odit quo rem cupiditate error saepe aliquid fugiat quaerat asper</p>",
-          source: require('@/assets/images/undraw_two_factor_authentication_namy.svg')
-        },
-        {
-          id: 4,
-          name: "Sample Project 4",
-          url: "sample-project-4",
-          desc: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et porro magni ut consectetur ad laborum dicta architecto ver veniam? Eum voluptatibus odit placeat, ut perspiciatis aspernd quas. Omnis animi dolorem ea ut quo praesentium sunt?</p><p>raesentium odit quo rem cupiditate error saepe aliquid fugiat quaerat asper</p>",
-          source: require('@/assets/images/undraw_content_team_3epn.svg')
-        }
-      ]
+      projects: []
+    }
+  },
+  async created() {
+    this.projects = await this.fetchProjects()
+  },
+  methods: {
+    getImg(imgName) {
+      return require(`@/assets/images/${imgName}`)
+    },
+
+    async fetchProjects() {
+      const res = await fetch('http://localhost:5000/projects')
+      const data = await res.json()
+      return data
     }
   }
 }
 </script>
 
 <style scoped>
+  .wrapper {
+    padding: 0 1rem;
+  }
   h1 {
     letter-spacing: -1.5px;
   }
@@ -116,9 +114,8 @@ export default {
     color: #1c1c1c;
   }
 
-
   article {
     box-shadow: 0 2px 10px 0 rgba(0,0,0,.2),0 0 1px 0 rgba(0,0,0,.19);
-    padding: 0 1rem;
+    padding: 0 1rem 1rem;
   }
 </style>
