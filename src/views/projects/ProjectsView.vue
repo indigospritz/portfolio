@@ -22,7 +22,7 @@
           <!-- <TestingComponent /> -->
           </article>
         </div>
-        <small>This is a test.</small>
+        <!-- <small>This is a test.</small> -->
       </section>
     </div>
   </transition>

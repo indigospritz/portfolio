@@ -1,9 +1,9 @@
-import { mount, shallowMount, RouterLinkStub } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import HelloWorld from '@/components/HelloWorld.vue'
 
 import ProjectsView from '@/views/projects/ProjectsView.vue'
-import AppNavbar from '@/components/AppNavbar.vue'
-import { RouterLink } from 'vue-router'
+// import AppNavbar from '@/components/AppNavbar.vue'
+// import { RouterLink } from 'vue-router'
 // import routes from '@/router/index.js'
 
 describe('HelloWorld.vue', () => {
