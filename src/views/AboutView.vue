@@ -1,54 +1,56 @@
 <template>
-  <h1><code>About</code></h1>
-  <div class="about-wrapper">
-    <section class="icons">
-      <div class="icon-wrapper">
-        <i class="fa-brands fa-vuejs" title="asdasd"></i>
-        <span>Vue</span>
-      </div>
+  <div class="wrapper">
+    <h1><code>About</code></h1>
+    <div class="about-wrapper">
+      <section class="icons">
+        <div class="icon-wrapper">
+          <i class="fa-brands fa-vuejs" title="asdasd"></i>
+          <span>Vue</span>
+        </div>
 
-      <!-- <div class="icon-wrapper">
-        <i class="fa-brands fa-node-js"></i>
-        <span>Node</span>
-      </div> -->
+        <!-- <div class="icon-wrapper">
+          <i class="fa-brands fa-node-js"></i>
+          <span>Node</span>
+        </div> -->
 
-      <div class="icon-wrapper">
-        <i class="fa-brands fa-js"></i>
-        <span>JavaScript</span>
-      </div>
+        <div class="icon-wrapper">
+          <i class="fa-brands fa-js"></i>
+          <span>JavaScript</span>
+        </div>
 
-      <div class="icon-wrapper">
-        <img src="@/assets/icons/mysql.png" class="mysql" alt="">
-        <span>MySQL</span>
-      </div>
+        <div class="icon-wrapper">
+          <img src="@/assets/icons/mysql.png" class="mysql" alt="">
+          <span>MySQL</span>
+        </div>
 
-      <div class="icon-wrapper">
-        <i class="fa-brands fa-html5"></i>
-        <span>HTML</span>
-      </div>
+        <div class="icon-wrapper">
+          <i class="fa-brands fa-html5"></i>
+          <span>HTML</span>
+        </div>
 
-      <div class="icon-wrapper">
-        <i class="fa-brands fa-css3"></i>
-        <span>CSS</span>
-      </div>
+        <div class="icon-wrapper">
+          <i class="fa-brands fa-css3"></i>
+          <span>CSS</span>
+        </div>
 
-      <div class="icon-wrapper">
-        <img src="@/assets/icons/jestjs.png" class="mysql" alt="">
-        <span>Jest</span>
-      </div>
+        <div class="icon-wrapper">
+          <img src="@/assets/icons/jestjs.png" class="mysql" alt="">
+          <span>Jest</span>
+        </div>
 
-      <div class="icon-wrapper">
-        <i class="fa-brands fa-hackerrank"></i>
-        <span>HackerRank</span>
-      </div>
-      
-    </section>
+        <div class="icon-wrapper">
+          <i class="fa-brands fa-hackerrank"></i>
+          <span>HackerRank</span>
+        </div>
+        
+      </section>
 
-    <article>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cumque culpa et alias earum quis eum deleniti quod aliquam necessitatibus expedita deserunt sit perspiciatis nostrum laborum excepturi ducimus ex ipsam delectus, veniam debitis commodi dicta vitae. Voluptates temporibus deleniti quis, alias atque aliquam dolore in laborum accusamus ratione illum, minus odit beatae! Blanditiis officiis facilis reprehenderit rerum quos eaque veritatis velit voluptatum nam vel, modi necessitatibus at a aspernatur quas sed ipsam commodi quaerat dicta enim? Nam cumque facere explicabo quaerat modi, doloribus officia eaque, itaque, tenetur mollitia laborum laboriosam enim id quis quo provident illo. Neque beatae quod optio.</p>
+      <article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cumque culpa et alias earum quis eum deleniti quod aliquam necessitatibus expedita deserunt sit perspiciatis nostrum laborum excepturi ducimus ex ipsam delectus, veniam debitis commodi dicta vitae. Voluptates temporibus deleniti quis, alias atque aliquam dolore in laborum accusamus ratione illum, minus odit beatae! Blanditiis officiis facilis reprehenderit rerum quos eaque veritatis velit voluptatum nam vel, modi necessitatibus at a aspernatur quas sed ipsam commodi quaerat dicta enim? Nam cumque facere explicabo quaerat modi, doloribus officia eaque, itaque, tenetur mollitia laborum laboriosam enim id quis quo provident illo. Neque beatae quod optio.</p>
 
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit repellat consequatur enim quaerat minus, nemo facere exercitationem architecto quisquam. Maiores ipsum, facere magni assumenda dignissimos quisquam temporibus minima neque odio perspiciatis illum incidunt, cumque ad odit sequi velit dolorem, dolor soluta placeat hic amet provident. Neque eius porro consequatur sed.</p>
-    </article>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit repellat consequatur enim quaerat minus, nemo facere exercitationem architecto quisquam. Maiores ipsum, facere magni assumenda dignissimos quisquam temporibus minima neque odio perspiciatis illum incidunt, cumque ad odit sequi velit dolorem, dolor soluta placeat hic amet provident. Neque eius porro consequatur sed.</p>
+      </article>
+    </div>
   </div>
 </template>
 
@@ -59,8 +61,12 @@ export default {
 </script>
 
 <style scoped>
+  .wrapper {
+    padding: 0 1rem;
+  }
   .about-wrapper {
     display: flex;
+    justify-content: center;
     gap: 1.5rem;
   }
 

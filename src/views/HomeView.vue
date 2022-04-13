@@ -10,35 +10,9 @@
     </div>
 
   </section>
-
-    <!-- <h2><code class="projects-header">Projects</code></h2>
-    <section class="projects">
-      
-      <div class="card-project">
-         <img src="@/assets/images/undraw_camping_noc8.svg" class="card-figure-sm" alt="Camping">
-         <a href="#"><code>Project One</code></a>
-      </div>
-
-      <div class="card-project">
-         <img src="@/assets/images/undraw_hiking_re_k0bc.svg" class="card-figure-sm" alt="Camping">
-         <a href="#"><code>Project Two</code></a>
-      </div>
-
-      <div class="card-project">
-         <img src="@/assets/images/undraw_camping_noc8.svg" class="card-figure-sm" alt="Camping">
-         <a href="#"><code>Project Three</code></a>
-      </div>
-
-      <div class="card-project">
-         <img src="@/assets/images/undraw_camping_noc8.svg" class="card-figure-sm" alt="Camping">
-         <a href="#"><code>Project Four</code></a>
-      </div>
-
-    </section> -->
 </template>
 
 <script>
-// @ is an alias to /src
 
 export default {
   name: 'HomeView'

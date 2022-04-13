@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .wrapper {
     /* display: grid; */
     justify-content: center;
