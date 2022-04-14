@@ -49,7 +49,7 @@ export default {
     },
 
     async fetchProjects() {
-      const res = await fetch('https://portfolio-fake-server.herokuapp.com/projects')
+      const res = await fetch('http://localhost:5000/projects')
       const data = await res.json()
       return data
     }

@@ -5,7 +5,7 @@ module.exports = defineConfig({
   devServer: {
     proxy: {
       '^/api': {
-        target: 'https://https://portfolio-fake-server.herokuapp.com',
+        target: 'http://localhost:5000',
         changeOrigin: true,
         logLevel: 'debug',
         pathRewrite: { '^/api': '/' }
