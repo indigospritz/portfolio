@@ -8,7 +8,8 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "backend": "json-server --watch projects.json --port 5000"
+    "backend": "json-server --watch projects.json --port 5000",
+    "start": "node server.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
