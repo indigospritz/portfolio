@@ -37,21 +37,41 @@ export default {
   // },
   data () {
     return {
-      projects: []
+      projects: [
+        {
+          "id": 1,
+          "name": "Sample Project 1",
+          "url": "sample-project-1",
+          "desc": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et porro magni ut consectetur ad laborum dicta architecto veritatis nobis? Doloribus repudiandae quibusdam error, maxime doloremqntur fugit in magnam amet porro quos commodi alias veritatis earum quod quas. Omnis animi dolorem ea ut quo praesentium sunt?</p><p>raesentium odit quo rem cupiditate error saepe aliquid fugiat quaerat asper ue aperiam pariatur? Aperiam veniam, eum sapiente natus des conseqEum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequu</p>",
+          "source": "undraw_progressive_app_m-9-ms.svg"
+        },
+        {
+          "id": 2,
+          "name": "Sample Project 2",
+          "url": "sample-project-2",
+          "desc": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et porro magni ut consectetur ad laborum dicta architecto ver veniam? Eum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias veritatis earum quod quas. Omnis animi dolorem ea ut quo praesentium sunt?</p><p>raesentium odit quo rem cupiditate error saepe aliquid fugiat quaerat asper</p>",
+          "source": "undraw_progressive_app_m-9-ms.svg"
+        },
+        {
+          "id": 3,
+          "name": "Sample Project 3",
+          "url": "sample-project-3",
+          "desc": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et porro magni ut consectetur ad laborum dicta architecto ver veniam? Eum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias vEum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias vEum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias veritatis earum quod quas. Omnis animi dolorem ea ut quo praesentium sunt?</p><p>raesentium odit quo rem cupiditate error saepe aliquid fugiat quaerat asper</p>",
+          "source": "undraw_two_factor_authentication_namy.svg"
+        },
+        {
+          "id": 4,
+          "name": "Sample Project 4",
+          "url": "sample-project-4",
+          "desc": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et porro magni ut consectetur ad laborum dicta architecto ver veniam? Eum voluptatibus odit placeat, ut perspiciatis aspernd quas. Omnis animi dolorem ea ut quo praesentium sunt?</p><p>raesentium odit quo rem cupiditate error saepe aliquid fugiat quaerat asper</p>",
+          "source": "undraw_content_team_3epn.svg"
+        }
+      ]
     }
-  },
-  async created() {
-    this.projects = await this.fetchProjects()
   },
   methods: {
     getImg(imgName) {
       return require(`@/assets/images/${imgName}`)
-    },
-
-    async fetchProjects() {
-      const res = await fetch('http://localhost:5000/projects')
-      const data = await res.json()
-      return data
     }
   }
 }
