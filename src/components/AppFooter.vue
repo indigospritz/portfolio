@@ -50,4 +50,11 @@ export default {
   i {
     color: #6a6565;
   }
+
+  @media (max-width: 700px) {
+    footer {
+      padding: 1rem;
+      background-color: #e0e3e0;
+    }
+  }
 </style>

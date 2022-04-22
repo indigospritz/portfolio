@@ -1,11 +1,6 @@
 <template>
   <header>
-    <p>{{ screenSize }}</p>
-    <input v-model="screenSize">
-    <nav
-      v-if="screenSize > 700"
-      class="navbar-desktop"
-    >
+    <nav class="navbar-desktop">
       <a href="/home" class="tab-text logo"><h1>indigo</h1></a>
       <div class="tab-wrapper">
         <router-link
@@ -18,15 +13,17 @@
       </div>
     </nav>
 
-    <nav
-      v-else
-      class="navbar-mobile"
-    >
-      <button>
-        <span>---</span>
-        <span>---</span>
-        <span>---</span>
-      </button>
+    <nav class="navbar-mobile">
+      <h1 class="tab-text logo">indigo</h1>
+      <div class="tab-wrapper">
+        <router-link
+          v-for="tab in tabs"
+          :key="tab.id"
+          :to="tab.path"
+          v-text="tab.name"
+          class="tab-text"
+        />
+      </div>
     </nav>
   </header>
 </template>
@@ -151,31 +148,54 @@ export default {
     border-bottom: 3px solid #d1d4d1;
   }
 
-  @media (min-width: 500px) {
-    .logo {
-      font-size: 20px;
-    }
-
-    ul {
-      /* flex-direction: column; */
-    }
+  .navbar-mobile {
+    display: none;
   }
 
+  /* @media (max-width: 500px) {
+    .tab-text {
+      font-size: 100px;
+    }
+  }
+ */
   @media (max-width: 700px) {
     .logo {
-      font-size: 16px;
+      letter-spacing: 0;
     }
 
     .tab-wrapper {
       gap: 2rem .5rem;
+      flex-direction: row;
+      padding-bottom: 1rem;
+    }
+
+    nav {
+      justify-content: center;
+      background-color: #e0e3e0;
+    }
+
+    h1 {
+      font-size: 18px;
     }
 
     .tab-text {
-      padding: .5rem .3rem;
+      padding: 0 .3rem;
+      font-size: 14px;
     }
 
     header {
-      padding: .5rem 1rem;
+      padding: 0;
+    }
+
+    .navbar-desktop {
+      display: none;
+    }
+
+    .navbar-mobile {
+      display: grid;
+      align-items: center;
+      align-content: center;
+      text-align: center;
     }
   }
 </style>

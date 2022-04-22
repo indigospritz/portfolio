@@ -16,11 +16,23 @@ export default {
 
 <style scoped>
   .wrapper {
-    /* display: grid; */
     justify-content: center;
     text-align: center;
-   /* vertical-align: middle; */
-   display: grid;
+    display: grid;
+    width: 100%;
+  }
 
+  @media (max-width: 700px) {
+    .wrapper {
+      width: 100%;
+      margin: auto;
+    }
+
+    img {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: auto;
+    }
   }
 </style>

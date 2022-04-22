@@ -2,9 +2,9 @@
   <div class="wrapper">
     <h1><code>Let's link!</code></h1>
     <section>
-      <h2><code>Contact number: +63 995 165 4120</code></h2>
-      <h2><code>Email: delmontechristian@outlook.com</code></h2>
-      <h2><code>Addie: Salinas Drive, Lahug, Cebu City, Cebu, Philippines 6000</code></h2>
+      <h2><code>+63 995 165 4120</code></h2>
+      <h2><code>delmontechristian@outlook.com</code></h2>
+      <h2><code>Salinas Drive, Lahug, Cebu City, Cebu, Philippines 6000</code></h2>
     </section>
   </div>
 </template>
@@ -31,6 +31,7 @@ export default {
   }
 
   h1 {
+    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -47,5 +48,22 @@ export default {
 
   section {
     width: 100%;
+  }
+
+  @media (max-width: 700px) {
+    .wrapper {
+      padding: 0 .5rem;
+    }
+
+    h1 {
+      font-size: 18px;
+      justify-content: flex-start;
+    }
+  }
+
+  h2 {
+    font-size: 14px;
+    justify-content: flex-start;
+    margin: .5rem 0;
   }
 </style>

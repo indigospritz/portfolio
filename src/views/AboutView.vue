@@ -122,4 +122,42 @@ export default {
     max-width: 30px;
     margin: auto;
   }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 0 1rem;
+    }
+
+    .icons {
+      width: 100%;
+    }
+
+    .icon-wrapper {
+      flex-wrap: nowrap;
+      width: 65px;
+      height: 65px;
+    }
+
+    span {
+      display: none;
+    }
+
+    .about-wrapper {
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    article {
+      width: 100%;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+  }
 </style>

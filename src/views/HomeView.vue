@@ -108,5 +108,11 @@ export default {
     }
   }
 
+  @media (max-width: 700px) {
+    section {
+      padding: 0 .5rem;
+      /* height: 80vh; */
+    }
+  }
 
 </style>
