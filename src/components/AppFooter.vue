@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
   footer {
-    background: #e5e9e7;
+    /* background: #e5e9e7; */
     max-width: 1100px;
     margin: auto;
     display: flex;

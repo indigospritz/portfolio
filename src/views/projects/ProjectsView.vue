@@ -13,12 +13,15 @@
           </router-link>
         </div>
 
-        <div class="temp">
+        <div class="project-body">
           <article>
             <router-link :to="{ name: 'ProjectDetails', params: { id: project.id, name: project.name, url: project.url, desc: project.desc, source: project.source } }" class="project-title">
-              <h2><code>{{ project.name }}</code></h2>
+              <!-- <h2><code>{{ project.name }}</code></h2> -->
             </router-link>
-          <p v-html="project.desc"></p>
+          <!-- <p v-html="project.desc"></p> -->
+          <div class="project-desc">
+            <h2><code>Coming Soon</code></h2>
+          </div>
           <!-- <TestingComponent /> -->
           </article>
         </div>
@@ -109,6 +112,7 @@ export default {
 
   .project-figure__wrapper {
     max-height: 500px;
+    width: 30%;
   }
 
   .project-figure {
@@ -136,6 +140,25 @@ export default {
 
   article {
     box-shadow: 0 2px 10px 0 rgba(0,0,0,.2),0 0 1px 0 rgba(0,0,0,.19);
-    padding: 0 1rem 1rem;
+    padding: .5rem 1rem;
+    min-height: 10rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-body {
+    width: 100%;
+    color: #504d4d;
+  }
+
+  .project-desc {
+    display: flex;
+    align-items: center;
+  }
+
+  .project-desc > h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: 500;
   }
 </style>

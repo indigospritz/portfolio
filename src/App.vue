@@ -31,7 +31,7 @@ body {
 main {
   max-width: 1100px;
   min-height: 80vh;
-  background: #eaebea;
+  // background: #fafffa;
   margin: auto;
   overflow: auto;
   margin-top: 1rem;

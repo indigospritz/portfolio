@@ -1,7 +1,12 @@
 <template>
   <header>
-    <nav>
-      <a href="/" class="tab-text logo"><h1>indigo</h1></a>
+    <p>{{ screenSize }}</p>
+    <input v-model="screenSize">
+    <nav
+      v-if="screenSize > 700"
+      class="navbar-desktop"
+    >
+      <a href="/home" class="tab-text logo"><h1>indigo</h1></a>
       <div class="tab-wrapper">
         <router-link
           v-for="tab in tabs"
@@ -13,13 +18,16 @@
       </div>
     </nav>
 
-    <!-- <nav v-else-if="screen.width >= 360">
+    <nav
+      v-else
+      class="navbar-mobile"
+    >
       <button>
         <span>---</span>
         <span>---</span>
         <span>---</span>
       </button>
-    </nav> -->
+    </nav>
   </header>
 </template>
 
@@ -45,7 +53,39 @@ export default {
           path: '/contact',
           name: 'contact'
         }
-      ]
+      ],
+      screenSize: '',
+      windowScreenSize: window.innerHeight
+    }
+  },
+
+  watch: {
+    windowScreenSize(newSize, oldSize) {
+      this.screenSize = newSize - oldSize
+    }
+  },
+
+  mounted() {
+    this.onResize(() => {
+      window.addEventListener('resize', this.onResize)
+    })
+  },
+
+  beforeUnmount() {
+    window.removeEventListener('resize', this.onResize)
+  },
+
+  methods: {
+    // getScreenWidth() {
+    //   window.onresize = windowSize
+    //   window.onload = windowSize
+    // },
+
+    onResize() {
+      let windowSize = 0
+      windowSize = window.innerWidth
+      this.screenSize = windowSize
+      return windowSize
     }
   }
 }
@@ -53,7 +93,7 @@ export default {
 
 <style scoped>
   header {
-    background: #e5e9e7;
+    /* background: #e5e9e7; */
     max-width: 1100px;
     margin: auto;
     padding: .5rem 2rem;
@@ -78,7 +118,7 @@ export default {
   .tab-wrapper {
     display: flex;
     justify-content: flex-end;
-    gap: 2rem .5rem;
+    gap: 2rem 1rem;
   }
 
   .tab-text {
@@ -86,8 +126,12 @@ export default {
     font-family: Consolas, 'Courier New';
     font-weight: 900;
     padding: .5rem 1rem;
-    border-radius: 4px;
+    border-bottom: 3px solid transparent;
     color: #4b4141;
+  }
+
+  .tab-text:hover {
+    border-bottom: 3px solid #d1d4d1;
   }
 
   .logo {
@@ -95,21 +139,43 @@ export default {
     letter-spacing: -2px;
   }
 
-  .router-link-active {
-    background: #dddddd;
-
+  .router-link:hover {
+    border-bottom: 3px solid #d1d4d1;
   }
 
-  @media (max-width: 360px) {
+  .router-link-active {
+    border-bottom: 3px solid green;
+  }
+
+  .router-link-active:hover {
+    border-bottom: 3px solid #d1d4d1;
+  }
+
+  @media (min-width: 500px) {
     .logo {
-      font-size: 12px;
-    }
-    /* nav {
-      flex-direction: column;
+      font-size: 20px;
     }
 
     ul {
-      flex-direction: column;
-    } */
+      /* flex-direction: column; */
+    }
+  }
+
+  @media (max-width: 700px) {
+    .logo {
+      font-size: 16px;
+    }
+
+    .tab-wrapper {
+      gap: 2rem .5rem;
+    }
+
+    .tab-text {
+      padding: .5rem .3rem;
+    }
+
+    header {
+      padding: .5rem 1rem;
+    }
   }
 </style>
