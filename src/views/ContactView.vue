@@ -17,17 +17,10 @@ export default {
 
 <style scoped>
   .wrapper {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* align-content: center; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-    /* margin: auto; */
   }
 
   h1 {
@@ -59,11 +52,13 @@ export default {
       font-size: 18px;
       justify-content: flex-start;
     }
+
+    h2 {
+      font-size: 14px;
+      justify-content: flex-start;
+      margin: .5rem 0;
+    }
   }
 
-  h2 {
-    font-size: 14px;
-    justify-content: flex-start;
-    margin: .5rem 0;
-  }
+  
 </style>

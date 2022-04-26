@@ -161,4 +161,18 @@ export default {
     letter-spacing: 2px;
     font-weight: 500;
   }
+
+  @media (max-width: 700px) {
+    section {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-figure {
+      width: 100%;
+      min-width: 200px;
+      height: auto;
+    }
+  }
 </style>
