@@ -36,6 +36,13 @@ export default {
     justify-content: space-between;
     padding: 1rem 2rem;
     margin-top: 1rem;
+    /* align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 4rem; */
+    flex-shrink: 0;
   }
 
   .socials {

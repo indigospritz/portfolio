@@ -26,6 +26,9 @@ export default {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: #e8f7f0;
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   main {
@@ -36,6 +39,7 @@ export default {
     overflow: auto;
     margin-top: 1rem;
     padding: 2rem;
+    flex: 1 0 auto;
   }
 
   @media (max-width: 700px) {
