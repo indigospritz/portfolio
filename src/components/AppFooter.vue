@@ -54,7 +54,7 @@ export default {
     font-weight: 900;
   }
 
-  i {
+  i, span {
     color: #6a6565;
   }
 
