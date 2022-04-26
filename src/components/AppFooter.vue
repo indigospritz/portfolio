@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <span><code>Christian Del Monte v.1</code></span>
+    <span><code>Christian Del Monte v.1.2</code></span>
     <div class="socials">
       <a href="https://github.com/delmsnoob" target="_blank">
         <i class="fa-brands fa-github"></i>

@@ -28,23 +28,23 @@ export default {
     position: relative;
     height: 100%;
     display: flex;
-    flex-direction: column;
   }
 
   main {
     max-width: 1100px;
-    min-height: 80vh;
+    height: 100vh;
     // background: #fafffa;
     margin: auto;
     overflow: auto;
     margin-top: 1rem;
     padding: 2rem;
-    flex: 1 0 auto;
+    overflow: hidden;
   }
 
   @media (max-width: 700px) {
     main {
       padding: 0;
+      margin-bottom: 4rem;
     }
   }
 </style>

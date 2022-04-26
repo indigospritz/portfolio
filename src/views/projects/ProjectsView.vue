@@ -62,13 +62,13 @@ export default {
           "desc": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et porro magni ut consectetur ad laborum dicta architecto ver veniam? Eum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias vEum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias vEum voluptatibus odit placeat, ut perspiciatis aspernatur accusamus consequuntur fugit in magnam amet porro quos commodi alias veritatis earum quod quas. Omnis animi dolorem ea ut quo praesentium sunt?</p><p>raesentium odit quo rem cupiditate error saepe aliquid fugiat quaerat asper</p>",
           "source": "undraw_two_factor_authentication_namy.svg"
         },
-        {
+        /* {
           "id": 4,
           "name": "Sample Project 4",
           "url": "sample-project-4",
           "desc": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et porro magni ut consectetur ad laborum dicta architecto ver veniam? Eum voluptatibus odit placeat, ut perspiciatis aspernd quas. Omnis animi dolorem ea ut quo praesentium sunt?</p><p>raesentium odit quo rem cupiditate error saepe aliquid fugiat quaerat asper</p>",
           "source": "undraw_content_team_3epn.svg"
-        }
+        } */
       ]
     }
   },
@@ -163,6 +163,11 @@ export default {
   }
 
   @media (max-width: 700px) {
+    .wrapper {
+      overflow: hidden;
+      height: 100%;
+    }
+
     section {
       display: flex;
       gap: 2rem;
