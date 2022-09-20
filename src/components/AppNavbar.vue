@@ -36,7 +36,7 @@ export default {
       tabs: [
         {
           path: '/',
-          name: 'home'
+          name: ''
         },
         {
           path: '/about',
