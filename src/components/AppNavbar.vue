@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="navbar-desktop">
-      <a href="/home" class="tab-text logo"><h1>indigo</h1></a>
+      <a href="/" class="tab-text logo"><h1>indigo</h1></a>
       <div class="tab-wrapper">
         <router-link
           v-for="tab in tabs"
@@ -36,7 +36,7 @@ export default {
       tabs: [
         {
           path: '/',
-          name: ''
+          name: 'home'
         },
         {
           path: '/about',
